@@ -18,26 +18,7 @@ publish:
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
     repo: fieldnation/drone-s3-sync
-    tag: latest
+    tag:
+      - "latest"
     when:
       branch: master
-  docker:
-    username: $$DOCKER_USER
-    password: $$DOCKER_PASS
-    email: $$DOCKER_EMAIL
-    repo: fieldnation/drone-s3-sync
-    tag: develop
-    when:
-      branch: develop
-
-plugin:
-  name: S3 Sync
-  desc: Sync a directory with an Amazon S3 Bucket
-  type: publish
-  image: fieldnation/drone-s3-sync
-  labels:
-    - publish
-    - artifacts
-    - amazon
-    - aws
-    - s3
