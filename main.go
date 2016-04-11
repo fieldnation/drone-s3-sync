@@ -231,9 +231,5 @@ func (a *app) runJobs() {
 }
 
 func debug(format string, args ...interface{}) {
-	if os.Getenv("DEBUG") != "" {
-		fmt.Printf(format+"\n", args...)
-	} else {
-		fmt.Printf(".")
-	}
+	fmt.Printf(".")
 }
